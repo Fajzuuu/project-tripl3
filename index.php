@@ -28,7 +28,7 @@ if (isset($_SESSION['login']) && $_SESSION['role'] === 'user') {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tech Computer Store</title>
+    <title>Tripl3 computer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
