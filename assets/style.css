@@ -1,0 +1,245 @@
+body {
+    background-color: #ffffff;
+}
+
+.marginal {
+    margin:76px;
+}
+
+.hero {
+    background: linear-gradient(to right, #000, #333);
+}
+
+.category-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.category-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-circle:hover {
+    background-color: #dc3545;
+}
+
+/* =========================
+   STICKY HEADER
+========================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ===============================
+   SPECIAL OFFER - FINAL FIX
+=============================== */
+
+#special-offer {
+    background: #f5f5f5;
+    padding: 30px 0;
+}
+
+/* container khusus horizontal */
+.product-grid {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+/* scrollbar */
+.product-grid::-webkit-scrollbar {
+    height: 6px;
+}
+.product-grid::-webkit-scrollbar-thumb {
+    background: #dc3545;
+    border-radius: 10px;
+}
+
+/* card dikunci */
+.product-card {
+    width: 250px;
+    min-width: 250px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* wrapper gambar */
+.product-img-wrapper {
+    width: 100%;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* gambar aman */
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+/* zoom aman */
+.product-img-wrapper:hover img {
+    transform: scale(1.15);
+}
+
+/* tombol merah */
+.btn-red {
+    background: #dc3545;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+
+/* =========================
+   GLOBAL SECTION BOX
+========================= */
+
+.section-box {
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-btn {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user-dropdown * {
+    white-space: nowrap !important;
+}
+
+.dropdown-menu {
+    min-width: 260px !important;
+    padding: 14px 18px;
+    border-radius: 14px;
+}
+
+.user-dropdown.show {
+    display: block;
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 12px 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+.user-dropdown a:hover {
+    background: #f5f5f5;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+.product-box{
+        background:#fff;
+border-radius:14px;
+            padding:24px;
+            box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.product-image{
+    width:100%;
+    border-radius:12px;
+}
+.price-old{
+    text-decoration:line-through;
+    color:#999;
+}
+.price-new{
+    font-size:1.6rem;
+    font-weight:700;
+    color:#dc3545
+}
+.nav-tabs .nav-link{
+    color:#333;
+    font-weight:500;
+}
+.nav-tabs .nav-link.active{
+    color:#dc3545;
+    border-color:#dc3545 #dc3545 #fff;
+}
+.tab-content{
+    padding-top:20px;
+}
+
+
+/* pastikan card jadi parent layer */
+.product-card {
+    position: relative;
+}
+
+/* paksa tombol admin di lapisan atas */
+.admin-action {
+    position: relative;
+    z-index: 20;
+}
+
+/* cegah elemen lain menutup tombol */
+.product-img-wrapper,
+.product-img-wrapper img {
+    pointer-events: none;
+}
+
+/* Read more tidak menutupi area bawah */
+.btn-red {
+    position: relative;
+    z-index: 5;
+}
+
+
+@media (max-width: 768px) {
+  .section-title,
+  .marginal {
+    margin: 0;
+  }
+  .intro-section h2 {
+    font-size: 2rem;
+  }
+
+  .layout-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
