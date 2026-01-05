@@ -151,7 +151,7 @@ if (!$produk) {
       <!-- BUTTON ADMIN / USER -->
       <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
 
-  <a href="edit_barang.php?id_produk=<?= $produk['id_produk'] ?>"
+  <a href="edit_produk.php?id_produk=<?= $produk['id_produk'] ?>"
      class="btn btn-warning me-2">
      ✏ Edit Product
   </a>
@@ -284,7 +284,7 @@ if (!$produk) {
 <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
   <div class="admin-action mt-2 d-flex gap-2 justify-content-center" style="z-index: 10;">
     <a href="edit_produk.php?id_produk=<?= $row['id_produk'] ?>"
-       class="btn btn-warning btn-sm">
+       class="btn btn-warning me-2">
        ✏ Edit
     </a>
     <button type="button"
